@@ -6,10 +6,10 @@ RUN wget https://github.com/casey/just/releases/download/1.13.0/just-1.13.0-x86_
     mv just /bin/ &&\
     rm just-1.13.0-x86_64-unknown-linux-musl.tar.gz
 
-
 RUN pip install poetry && poetry config virtualenvs.create false
 RUN mkdir /app
 WORKDIR /app
+ENV PYTHONPATH=/app/:$PYTHONPATH
 ADD poetry.lock pyproject.toml /app/
 RUN --mount=type=cache,target=/root/.cache/pypoetry/artifacts \
     --mount=type=cache,target=/root/.cache/pypoetry/cache \

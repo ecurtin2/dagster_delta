@@ -1,4 +1,3 @@
-
 @lint:
     ruff {{justfile_directory()}}/dagster_delta
     ruff {{justfile_directory()}}/dagster_delta
@@ -16,19 +15,15 @@
     ruff {{justfile_directory()}}/dagster_delta --fix
     ruff {{justfile_directory()}}/tests --fix
 
+@docs:
+    mkdocs build
+    printf "\n-------------✅ mkdocs ✅ -----------------------\n"
+
 @test:
     python -m pytest tests
 
 
-ci_success_msg := ''' 
-   | _ \ __ _    ___    ___    ___   __| |   | |   
-   |  _// _` |  (_-<   (_-<   / -_) / _` |   |_|   
-  _|_|_ \__,_|  /__/_  /__/_  \___| \__,_|  _(_)_  
-_| ``` _|````| |````` |`````` |```` |````` |`````| 
- `-0-0- `-0-0- `-0-0- `-0-0- `-0-0- `-0-0- `-0-0-' 
-'''
-
-@ci: check test
+@ci: check test docs
     echo '   | _ \ __ _    ___    ___    ___   __| |   | |'
     echo '   |  _// _` |  (_-<   (_-<   / -_) / _` |   |_|'
     echo '  _|_|_ \__,_|  /__/_  /__/_  \___| \__,_|  _(_)_'
