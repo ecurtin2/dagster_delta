@@ -3,9 +3,9 @@ RUN apt update && apt install git curl wget -y
 RUN mkdir -p ~/bin
 RUN wget https://github.com/casey/just/releases/download/1.13.0/just-1.13.0-x86_64-unknown-linux-musl.tar.gz &&\
     tar -xzf just-1.13.0-x86_64-unknown-linux-musl.tar.gz &&\
-    mv just ~/bin/ &&\
+    mv just /bin/ &&\
     rm just-1.13.0-x86_64-unknown-linux-musl.tar.gz
-ENV PATH=~/bin:$PATH
+
 
 RUN pip install poetry && poetry config virtualenvs.create false
 RUN mkdir /app
