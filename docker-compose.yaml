@@ -2,5 +2,5 @@ version: '3.9'
 services:
   dev:
     build: .
-    image: image_tag:${TAG:-dev}
+    image: evamicur/dagster_delta:${TAG:-dev}
 
