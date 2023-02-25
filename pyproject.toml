@@ -6,6 +6,7 @@ authors = ["Evan Curtin"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+dagster = "^1.1.20"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.252"

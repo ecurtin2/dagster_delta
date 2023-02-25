@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.10-slim
 RUN apt update && apt install git curl wget -y
 RUN mkdir -p ~/bin
 RUN wget https://github.com/casey/just/releases/download/1.13.0/just-1.13.0-x86_64-unknown-linux-musl.tar.gz &&\
