@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Checks
         shell: bash
-        run: docker compose run --entrypoint=just dev ci
+        run: docker compose run --entrypoint=/bin/just dev ci
 
       - name: Push Image
         shell: bash
