@@ -7,6 +7,8 @@ authors = ["Evan Curtin"]
 [tool.poetry.dependencies]
 python = "^3.10"
 dagster = "^1.1.20"
+polars = "^0.16.8"
+pyarrow = "^11.0.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.252"
@@ -17,6 +19,7 @@ mkdocs = "^1.4.2"
 mkdocs-material = ">=8.0.0,<9.0.0"
 mkdocs-jupyter = "^0.22.0"
 ipykernel = "^6.21.2"
+setuptools = "^67.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
